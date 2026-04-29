@@ -2,4 +2,4 @@ CC = gcc
 CF = *.c
 
 all: $(CF)
-	$(CC) -O3 $(CF) && ./a.out
+	$(CC) -O3 $(CF) -o drake
