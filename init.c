@@ -39,11 +39,13 @@ char setup_sizes() {
 
   fputs("  What is the width of your game?\n    ~> ", stdout);
   scanf("%hi", &x);
-  fputs("  What is the height of your game?\n    ~> ", stdout);
-  scanf("%hi", &y);
 
   if (x > 255 || x <= SAFE_ZONE * 2)
     return ERR_X_SIZE;
+
+  fputs("  What is the height of your game?\n    ~> ", stdout);
+  scanf("%hi", &y);
+
   if (y > 255 || y <= SAFE_ZONE * 2)
     return ERR_Y_SIZE;
 
